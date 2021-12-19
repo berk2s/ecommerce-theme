@@ -1,0 +1,34 @@
+.top-info {
+    @include colorize("background-color", black);
+    .container {
+        @include display(row, space-between, center);
+        width: 100%;
+        height: 44px;
+        .open-hours-area {
+            @include display(row, space-between);
+            .days {
+                @include font(color-5, 12px, 600, 23px);
+                margin-right: 6px;
+            }
+            .hours {
+                @include font(white, 12px, 600, 23px);
+            }
+        }
+        .address-area {
+            span {
+                @include font(color-1, 12px, 600, 23px);
+            }
+            a {
+                margin-left: 6px;
+            }
+        }
+        .social-area {
+            @include display(row, space-between, center);
+            @include font(white, 12px, 600, 23px);
+            i {
+                font-size: 14px;
+                margin-left: 8px;
+            }
+        }
+    }
+}
