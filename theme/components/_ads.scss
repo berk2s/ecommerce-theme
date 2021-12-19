@@ -1,0 +1,12 @@
+.ads-area {
+    @include display(row, center, center);
+    @include colorize("background-color", color-9);
+    width: 100%;
+    height: 70px;
+    .ads-text {
+        @include font(color-8, 14px, 400);
+        .bold {
+            @include font(color-8, 14px, 600);
+        }
+    }
+}

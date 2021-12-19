@@ -12,6 +12,9 @@ ul {
   ul li {
     float: left; }
 
+p {
+  margin-bottom: 0 !important; }
+
 a {
   text-decoration: none !important; }
 
@@ -167,6 +170,27 @@ section .section-header {
     line-height: initial;
     color: #a2a6b0; }
 
+.ads-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7ff;
+  width: 100%;
+  height: 70px; }
+  .ads-area .ads-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: initial;
+    color: #272560; }
+    .ads-area .ads-text .bold {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: initial;
+      color: #272560; }
+
 header .top-info {
   background-color: #020202; }
   header .top-info .container {
@@ -218,7 +242,7 @@ header .top-info {
 
 header nav {
   border-bottom-color: #cacdd8;
-  border-bottom-width: 1;
+  border-bottom-width: 1px;
   border-bottom-style: solid;
   height: 92px; }
   header nav .container {
@@ -258,7 +282,7 @@ header nav {
         justify-content: center;
         align-items: center;
         border-color: #0156ff;
-        border-width: 1;
+        border-width: 1px;
         border-style: solid;
         padding: 8px 26px;
         box-sizing: border-box;
@@ -280,6 +304,103 @@ header nav {
         header nav .container .action-area .icon-area i {
           color: #020202; }
 
+footer {
+  background-color: #020202;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; }
+  footer .nav-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 70px;
+    margin-bottom: 35px; }
+    footer .nav-area nav {
+      padding-top: 45px; }
+      footer .nav-area nav .nav-header-text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: initial;
+        color: #838383; }
+      footer .nav-area nav .footer-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start; }
+        footer .nav-area nav .footer-menu .menu-item .menu-item-text {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: initial;
+          color: #838383; }
+  footer .brand-info {
+    border-top-color: #838383;
+    border-top-width: 1px;
+    border-top-style: solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 55px; }
+    footer .brand-info .social-area {
+      color: white; }
+    footer .brand-info .payment-methods {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px; }
+      footer .brand-info .payment-methods img {
+        width: 34px;
+        height: 26px;
+        object-fit: contain; }
+    footer .brand-info .copyright-text {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: initial;
+      color: white; }
+
+.featured-product-list-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  .featured-product-list-area .featured-product-list-tabs .featured-product-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px; }
+    .featured-product-list-area .featured-product-list-tabs .featured-product-list .featured-product-tab {
+      cursor: pointer; }
+      .featured-product-list-area .featured-product-list-tabs .featured-product-list .featured-product-tab .featured-product-tab-text {
+        padding-bottom: 5px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: initial;
+        color: #838383; }
+    .featured-product-list-area .featured-product-list-tabs .featured-product-list .active-tab {
+      border-bottom-color: #0156ff;
+      border-bottom-width: 2px;
+      border-bottom-style: solid; }
+      .featured-product-list-area .featured-product-list-tabs .featured-product-list .active-tab .featured-product-tab-text {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: initial;
+        color: #020202; }
+
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -298,6 +419,10 @@ header nav {
   --bs-color-5: #a2a6b0;
   --bs-color-6: #cacdd8;
   --bs-color-7: #666666;
+  --bs-color-8: #272560;
+  --bs-color-9: #f5f7ff;
+  --bs-color-10: #838383;
+  --bs-color-11: #020203;
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;

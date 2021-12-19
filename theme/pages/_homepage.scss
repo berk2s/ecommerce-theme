@@ -1,0 +1,22 @@
+.featured-product-list-area {
+    @include display(column, flex-start, flex-start);
+    .featured-product-list-tabs {
+        .featured-product-list {
+            @include display(row, flex-start, center);
+            gap: 25px;
+            .featured-product-tab {
+                cursor: pointer;
+                .featured-product-tab-text {
+                    padding-bottom: 5px;
+                    @include font(color-10, 16px, 600);
+                }
+            }
+            .active-tab {
+                @include border-bottom(color-3, 2px);
+                .featured-product-tab-text {
+                    @include font(full-black, 16px, 600);
+                }
+            }
+        }
+    }
+}
