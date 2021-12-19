@@ -1,10 +1,16 @@
-@mixin border-bottom($color, $width: 1, $style: solid) {
+@mixin border-bottom($color, $width: 1px, $style: solid) {
     @include colorize("border-bottom-color", $color);
     border-bottom-width: $width;
     border-bottom-style: $style;
 }
 
-@mixin border($color, $width: 1, $style: solid) {
+@mixin border-top($color, $width: 1px, $style: solid) {
+    @include colorize("border-top-color", $color);
+    border-top-width: $width;
+    border-top-style: $style;
+}
+
+@mixin border($color, $width: 1px, $style: solid) {
     @include colorize("border-color", $color);
     border-width: $width;
     border-style: $style;
