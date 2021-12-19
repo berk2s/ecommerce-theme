@@ -1,0 +1,42 @@
+.item-card {
+    .card-content {
+        @include display(column, flex-start, flex-start);
+        height: 346px;
+        padding: 0 20px;
+        .image-area {
+            padding-top: 15px;
+            width: 150px;
+            height: 150px;
+            @include display(row, center, center);
+            img {
+                width: 150px;
+                height: 150px;
+                object-fit: contain;
+                padding: 0 15px;
+            }
+        }
+        .review-area {
+            @include display(row, flex-start, center);
+            gap: 12px;
+        }
+        .info-area {
+            .product-name-text {
+                @include font(full-black, 13px, normal);
+                padding: 10px 0;
+            }
+            .price-area {
+                @include display(column, center, initial);
+                height: 40px;
+                gap: 5px;
+                .old-price-text {
+                    @include font(color-7, 14px, normal);
+                    text-decoration: line-through;
+                    text-decoration-line: line-through;
+                }
+                .current-price-text {
+                    @include font(full-black, 18px, 600);
+                }
+            }
+        }
+    }
+}
