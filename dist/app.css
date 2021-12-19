@@ -4,6 +4,14 @@
 * {
   font-family: "Poppins", sans-serif; }
 
+ul {
+  float: left;
+  list-style: none;
+  margin: 0 !important;
+  padding-left: 0 !important; }
+  ul li {
+    float: left; }
+
 a {
   text-decoration: none !important; }
 
@@ -16,42 +24,42 @@ a {
   border-bottom: 2px solid #fff;
   padding-bottom: 2px; }
 
-.top-info {
+header .top-info {
   background-color: #020202; }
-  .top-info .container {
+  header .top-info .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 44px; }
-    .top-info .container .open-hours-area {
+    header .top-info .container .open-hours-area {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: "flex-start"; }
-      .top-info .container .open-hours-area .days {
+      header .top-info .container .open-hours-area .days {
         font-style: normal;
         font-weight: 600;
         font-size: 12px;
         line-height: 23px;
         color: #a2a6b0;
         margin-right: 6px; }
-      .top-info .container .open-hours-area .hours {
+      header .top-info .container .open-hours-area .hours {
         font-style: normal;
         font-weight: 600;
         font-size: 12px;
         line-height: 23px;
         color: #fff; }
-    .top-info .container .address-area span {
+    header .top-info .container .address-area span {
       font-style: normal;
       font-weight: 600;
       font-size: 12px;
       line-height: 23px;
       color: #acacac; }
-    .top-info .container .address-area a {
+    header .top-info .container .address-area a {
       margin-left: 6px; }
-    .top-info .container .social-area {
+    header .top-info .container .social-area {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -61,9 +69,73 @@ a {
       font-size: 12px;
       line-height: 23px;
       color: #fff; }
-      .top-info .container .social-area i {
+      header .top-info .container .social-area i {
         font-size: 14px;
         margin-left: 8px; }
+
+header nav {
+  border-bottom-color: #cacdd8;
+  border-bottom-width: 1;
+  border-bottom-style: solid;
+  height: 92px; }
+  header nav .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit; }
+    header nav .container .brand-area {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 85px;
+      height: 69px; }
+      header nav .container .brand-area .logo {
+        width: 33px;
+        height: 40px; }
+    header nav .container .menu-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      flex: 10;
+      gap: 25px;
+      padding-left: 20px !important; }
+      header nav .container .menu-list .menu .menu-link {
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 23px;
+        color: #020202; }
+      header nav .container .menu-list .menu-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-color: #0156ff;
+        border-width: 1;
+        border-style: solid;
+        padding: 8px 26px;
+        box-sizing: border-box;
+        border-radius: 50px; }
+        header nav .container .menu-list .menu-btn .menu-link {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 23px;
+          color: #0156ff; }
+    header nav .container .action-area {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 22px; }
+      header nav .container .action-area .icon-area {
+        cursor: pointer; }
+        header nav .container .action-area .icon-area i {
+          color: #020202; }
 
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
@@ -74,7 +146,10 @@ a {
 :root {
   --bs-white: #fff;
   --bs-black: #020202;
+  --bs-full-black: #020202;
   --bs-color-1: #acacac;
+  --bs-color-2: #cacdd8;
+  --bs-color-3: #0156ff;
   --bs-color-5: #a2a6b0;
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;

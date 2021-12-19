@@ -1,4 +1,4 @@
-$colors: ( white: #fff, black: #020202, color-1: #acacac, color-5: #a2a6b0, );
+$colors: ( white: #fff, black: #020202, full-black: #020202, color-1: #acacac, color-2: #cacdd8, color-3: #0156ff, color-5: #a2a6b0, );
 @mixin colorize($prop, $color) {
     #{$prop}: map-get($colors, $color);
 }
