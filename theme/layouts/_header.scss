@@ -53,18 +53,97 @@ header {
                 flex: 10;
                 gap: 25px;
                 padding-left: 20px !important;
+                height: 100%;
+
                 .menu {
+                    height: 100%;
+                    align-items: center;
+                    display: flex;
+
                     .menu-link {
                         cursor: pointer;
                         @include font(full-black, 14px, 600, 23px);
                     }
+
+                    .wrapper {
+                        background-color: #fff;
+                        width: 100%;
+                        height: 250px;
+                        position: absolute;
+                        top: 134px;
+                        z-index: 999999;
+                        left: 0px;
+                        display: none;
+                    }
+                    &:hover {
+                        .menu {
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .wrapper {
+                            height: 630px;
+                            display: block;
+                            @include display(column, flex-start, flex-start);
+                            //  gap: 1rem;
+                            margin-bottom: -1rem;
+                            .sub__wrapper {
+                                border-bottom: 1px solid #ccc;
+                                @include display(row, flex-start, flex-start);
+                                gap: 1rem;
+                            }
+                        }
+                        .wrapper__item:not(:first-child) {
+                            border-left: 1px solid #ccc;
+                            height: 100%;
+                        }
+                        .wrapper__item {
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                            flex: 1;
+                        }
+
+                        .wrapper__item-parent {
+                            @include display(row, center, center);
+                        }
+
+                        .wrapper__item-link {
+                            color: #000;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-weight: 600;
+                            font-size: 14px;
+                            height: 44px;
+                        }
+
+                        .is-in-stock {
+                            color: #78a962;
+                            font-size: 10px;
+                        }
+
+                        .brand-wrapper {
+                            display: flex;
+                            width: 100%;
+                            padding: 2rem;
+                            justify-content: space-between;
+                            gap: 2rem;
+                        }
+
+                        .brand-wrapper img {
+                            width: 152.72px;
+                            filter: grayscale(100%);
+                        }
+                    }
                 }
+
                 .menu-btn {
                     @include display(row, center, center);
                     @include border(color-3);
                     padding: 8px 26px;
                     box-sizing: border-box;
                     border-radius: 50px;
+                    cursor: pointer;
                     .menu-link {
                         @include font(color-3, 14px, 600, 23px);
                     }
