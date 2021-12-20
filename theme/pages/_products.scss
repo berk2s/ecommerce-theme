@@ -1,0 +1,74 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+        @include font(full-black, 16, 700);
+    }
+}
+.filter__button {
+    border-radius: 50px;
+    border: 2px;
+    height: 37px;
+    width: 200px;
+    @include colorize(color, color-5);
+    @include display(row, center, center);
+    &-active {
+        margin-top: 16px;
+        @include colorize(background-color, color-3);
+        @include colorize(color, white);
+    }
+}
+.filter__main-header {
+    @include font(full-black, 16px, 700);
+    margin-bottom: 16px;
+}
+
+.filter__main-sub {
+    @include font(full-black, 14px, 600);
+    margin-bottom: 16px;
+}
+
+.filter__category,
+.filter__price,
+.filter__color,
+.filter__type {
+    padding: 24px 0;
+}
+
+.filter__category > *,
+.filter__price > * {
+    @include display(row, space-between, center);
+}
+
+.filter__list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.filter__select {
+    padding: 8px;
+}
+
+.filter__page {
+    margin-right: auto;
+}
+
+.narrow__filter {
+    display: flex;
+    gap: 16px;
+}
+
+.narrow__filter > span {
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.i-danger {
+    color: red;
+}
