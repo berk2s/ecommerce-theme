@@ -1,0 +1,41 @@
+.details-page {
+    .product-action-area {
+        @include border-bottom(color-2);
+        .container {
+            @include display(row, flex-end, center);
+            height: 100px;
+            gap: 20px;
+        }
+        height: 100px;
+        input {
+            width: 70px;
+            text-align: center !important;
+            @include font(full-black, 13px, 600);
+        }
+        .sale-text {
+            @include font(full-black, 14px);
+        }
+    }
+    .product-details {
+        .info-area {
+            @include display(column, center, flex-start);
+            @include colorize("background-color", color-9);
+            height: calc(100vh - 236px);
+            padding: 0 110px 0 200px;
+            .title {
+                @include font(full-black, 32px, normal);
+            }
+            .description {
+                @include font(full-black, 18px, normal);
+            }
+        }
+        .image-area {
+            @include display(row, flex-start, center);
+            padding: 60px 0;
+            img {
+                width: 369px;
+                height: 369px;
+            }
+        }
+    }
+}

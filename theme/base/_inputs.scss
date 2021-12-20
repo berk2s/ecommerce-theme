@@ -1,0 +1,9 @@
+input {
+    @include colorize("background-color", color-9);
+    border-radius: 6px;
+    height: 50px;
+    border: unset;
+    &:focus {
+        outline: unset;
+    }
+}
