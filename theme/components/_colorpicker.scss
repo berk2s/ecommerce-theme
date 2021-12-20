@@ -1,0 +1,30 @@
+.yellow {
+    background-color: #ffe546;
+    border: none;
+    padding: 12px;
+    border-radius: 100px;
+    border: #fff solid 1px;
+    box-shadow: 0px 0px 0px 2px #fff inset;
+
+    margin-right: 8px;
+}
+.yellow:hover {
+    border: #9b9b9b solid 1px;
+    box-shadow: 0px 0px 0px 2px #fff inset;
+    cursor: pointer;
+}
+.red {
+    background-color: #ff4646;
+    border: none;
+    padding: 12px;
+    border-radius: 100px;
+    border: #fff solid 1px;
+    box-shadow: 0px 0px 0px 2px #fff inset;
+
+    margin-right: 8px;
+}
+.red:hover {
+    border: #9b9b9b solid 1px;
+    box-shadow: 0px 0px 0px 2px #fff inset;
+    cursor: pointer;
+}

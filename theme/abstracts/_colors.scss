@@ -1,4 +1,20 @@
-$colors: ( white: #fff, black: #020202, full-black: #020202, smooth-black: #252931, color-1: #acacac, color-2: #cacdd8, color-3: #0156ff, color-4: #e9a426, color-5: #a2a6b0, color-6: #cacdd8, color-7: #666666, color-8: #272560, color-9: #f5f7ff, color-10: #838383, color-11: #020203, );
+$colors: (
+    white: #fff,
+    black: #020202,
+    full-black: #020202,
+    smooth-black: #252931,
+    color-1: #acacac,
+    color-2: #cacdd8,
+    color-3: #0156ff,
+    color-4: #e9a426,
+    color-5: #a2a6b0,
+    color-6: #cacdd8,
+    color-7: #666666,
+    color-8: #272560,
+    color-9: #f5f7ff,
+    color-10: #838383,
+    color-11: #020203,
+);
 @mixin colorize($prop, $color, $opacity: 1) {
     //#{$prop}: map-get($colors, $color);
     #{$prop}: rgba(map-get($colors, $color), $opacity);

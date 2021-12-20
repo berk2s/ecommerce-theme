@@ -1,0 +1,14 @@
+.breadcrumbs {
+    display: flex;
+}
+
+.breadcrumbs__link {
+    @include colorize("color", full-black);
+    padding-right: 8px;
+    @include font(black, 12px, 400);
+    &:not(:last-child):after {
+        content: ">";
+        @include colorize("color", full-black);
+        padding-left: 8px;
+    }
+}

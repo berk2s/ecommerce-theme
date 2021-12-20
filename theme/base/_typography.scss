@@ -5,3 +5,7 @@
     line-height: $line-height;
     @include colorize("color", $color);
 }
+
+.product__title {
+    @include font(full-black, 32px, 600);
+}
