@@ -1,10 +1,9 @@
 export function initializeSlider() {
-    if (document.querySelector('.js-slider-container')) {
-        showSlideImage(0);
+    showSlideImage(0);
 
-        document.querySelector('.js-slider-action-prev-btn').addEventListener('click', btnClick)
-        document.querySelector('.js-slider-action-next-btn').addEventListener('click', btnClick)
-    }
+    document.querySelector('.js-slider-action-prev-btn').addEventListener('click', btnClick)
+    document.querySelector('.js-slider-action-next-btn').addEventListener('click', btnClick)
+
 }
 
 function btnClick(event) {
