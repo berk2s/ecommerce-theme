@@ -1,4 +1,5 @@
 .item-card {
+    @include fade-animation;
     .card-content {
         @include display(column, flex-start, flex-start);
         height: 346px;

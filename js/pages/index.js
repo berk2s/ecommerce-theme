@@ -1,0 +1,2 @@
+export { initializeProducts }
+from './homepage'
