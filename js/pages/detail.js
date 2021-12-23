@@ -1,7 +1,7 @@
 import { getProductById } from '../services/api';
 import { renderProductDetail } from '../helpers/render-product-details';
 
-export const initializeProductDetail = function(productId) {
+export const initializeProductDetail = async function(productId) {
     try {
         if (document.querySelector('.js-product-title')) {
             const productDetailsResponse = await getProductById(productId);
