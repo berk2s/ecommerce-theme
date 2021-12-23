@@ -1,6 +1,8 @@
 import { initializeProducts } from './pages';
 import { initializeSlider } from './components';
 
+import '../theme/app.scss'
+
 window.onload = function() {
     if (document.querySelector('.js-slider-container')) {
         initializeSlider();
