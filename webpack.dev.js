@@ -17,6 +17,11 @@ module.exports = merge(common, {
             template: "./index.html",
         }),
 
+        new HtmlWebpackPlugin({
+            template: "./products.html",
+            filename: "./products.html",
+        }),
+
         new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
         new CleanWebpackPlugin(),
     ],
@@ -26,7 +31,7 @@ module.exports = merge(common, {
                 test: /\.(scss)$/,
                 use: [
                     {
-                        loader: "style-loader", // inject CSS to page
+                        loader: MiniCssExtractPlugin.loader, // inject CSS to page
                     },
                     {
                         loader: "css-loader", // translates CSS into CommonJS modules
