@@ -41,7 +41,7 @@ footer {
             }
         }
         .copyright-text {
-            @include font(white, 12px, 400);
+            @include font(white, 0.6rem, 400);
         }
     }
 }

@@ -8,16 +8,16 @@ header {
             .open-hours-area {
                 @include display(row, space-between);
                 .days {
-                    @include font(color-5, 12px, 600, 23px);
+                    @include font(color-5, 0.5rem, 600, 23px);
                     margin-right: 6px;
                 }
                 .hours {
-                    @include font(white, 12px, 600, 23px);
+                    @include font(white, 0.5rem, 600, 23px);
                 }
             }
             .address-area {
                 span {
-                    @include font(color-1, 12px, 600, 23px);
+                    @include font(color-1, 0.5rem, 600, 23px);
                 }
                 a {
                     margin-left: 6px;
@@ -25,7 +25,7 @@ header {
             }
             .social-area {
                 @include display(row, space-between, center);
-                @include font(white, 12px, 600, 23px);
+                @include font(white, 0.5rem, 600, 23px);
                 i {
                     font-size: 14px;
                     margin-left: 8px;
@@ -35,7 +35,6 @@ header {
     }
     nav {
         @include border-bottom(color-2);
-        height: 92px;
         .container {
             @include display(row, space-between, center);
             height: inherit;

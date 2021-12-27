@@ -22,8 +22,13 @@ export const renderProducts = function(renderEl, products, wrapperClass = null) 
         wrapperEl.classList.add('item-card');
         wrapperEl.innerHTML = card;
 
+
         if (wrapperClass && wrapperClass.trim().length > 0) {
-            wrapperEl.classList.add(wrapperClass);
+            const destructuedClasses = wrapperClass.split(' ');
+
+            destructuedClasses.forEach(clazz => {
+                wrapperEl.classList.add(clazz);
+            })
         }
 
         targetEl.appendChild(wrapperEl);

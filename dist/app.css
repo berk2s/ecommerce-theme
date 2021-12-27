@@ -335,8 +335,7 @@ header .top-info {
 header nav {
   border-bottom-color: #cacdd8;
   border-bottom-width: 1px;
-  border-bottom-style: solid;
-  height: 92px; }
+  border-bottom-style: solid; }
   header nav .container {
     display: flex;
     flex-direction: row;

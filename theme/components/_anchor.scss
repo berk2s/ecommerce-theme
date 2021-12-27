@@ -3,7 +3,7 @@ a {
 }
 
 .underlined-link {
-    @include font(white, 12px, 600, 23px);
+    @include font(white, 0.6rem, 600, 23px);
     border-bottom: 2px solid #fff;
     padding-bottom: 2px;
 }
