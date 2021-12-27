@@ -9,8 +9,8 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = merge(common, {
     mode: "development",
     output: {
-        filename: "[name].bundle.js",
-        path: path.resolve(__dirname, "distro"),
+        filename: "[name].js",
+        path: path.resolve(__dirname, "dist"),
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -22,7 +22,7 @@ module.exports = merge(common, {
             filename: "./products.html",
         }),
 
-        new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
+        new MiniCssExtractPlugin({ filename: "[name].css" }),
         new CleanWebpackPlugin(),
     ],
     module: {

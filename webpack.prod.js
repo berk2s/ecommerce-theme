@@ -10,8 +10,8 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = merge(common, {
     mode: "production",
     output: {
-        filename: "[name].[contenthash].bundle.js",
-        path: path.resolve(__dirname, "distro"),
+        filename: "[name].[contenthash].js",
+        path: path.resolve(__dirname, "dist"),
     },
     optimization: {
         minimizer: [
