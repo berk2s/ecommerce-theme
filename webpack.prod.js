@@ -20,7 +20,7 @@ module.exports = merge(common, {
                 minify: TerserPlugin.uglifyJsMinify,
             }),
             new HtmlWebpackPlugin({
-                template: "./index.html",
+                template: "./html/index.html",
                 minify: {
                     removeAttributeQuotes: true,
                     collapseWhitespace: true,
@@ -28,7 +28,7 @@ module.exports = merge(common, {
                 },
             }),
             new HtmlWebpackPlugin({
-                template: "./products.html",
+                template: "./html/products.html",
                 filename: "./products.html",
                 minify: {
                     removeAttributeQuotes: true,
@@ -37,7 +37,7 @@ module.exports = merge(common, {
                 },
             }),
             new HtmlWebpackPlugin({
-                template: "./login.html",
+                template: "./html/login.html",
                 filename: "./login.html",
                 minify: {
                     removeAttributeQuotes: true,

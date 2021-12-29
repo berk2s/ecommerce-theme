@@ -14,16 +14,16 @@ module.exports = merge(common, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./index.html",
+            template: "./html/index.html",
         }),
 
         new HtmlWebpackPlugin({
-            template: "./products.html",
+            template: "./html/products.html",
             filename: "./products.html",
         }),
 
         new HtmlWebpackPlugin({
-            template: "./login.html",
+            template: "./html/login.html",
             filename: "./login.html",
         }),
 
