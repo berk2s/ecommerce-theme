@@ -28,6 +28,18 @@ export const itemCardTemplate = `<div class="card-content">
                             </div>
                         </div>`;
 
+export const headerDropdownTemplate = `
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" aria-current="page" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                 {0} {1} <img src="../assets/header/user_icon.png" style="width: 2rem; height: 2rem;" alt="user icon">
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Order History</a></li>
+                                <li><a class="dropdown-item js-logout" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+`;
 
 String.prototype.format = function() {
     var args = arguments;
