@@ -6,6 +6,11 @@ export const getProducts = function(page = 0, size = 24, sort = 'createdAt', ord
     })
 }
 
+/**
+ * 
+ * @param {*} productId 
+ * @returns 
+ */
 export const getProductById = function(productId) {
     if (!productId) {
         throw new Error('Do not forget to send product id');

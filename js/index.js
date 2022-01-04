@@ -1,11 +1,24 @@
-import { initializeProducts } from './pages';
-import { initializeSlider } from './components';
+import { initializeLoginPage, initializeProducts } from './pages';
+import { initializeSlider, prepareHeader } from './components';
 import { userRegisterFormHandler } from './pages';
-import { Collapse } from 'bootstrap';
 
 import '../theme/app.scss'
+import { auth } from './helpers';
 
-window.onload = function() {
+/**
+ * Loads functions if regarding class is exists
+ */
+window.onload = async function() {
+    try {
+        await auth.initializeAuth()
+    } catch (err) {
+
+    }
+
+    if (document.querySelector('.js-header-auth-area')) {
+        prepareHeader();
+    }
+
     if (document.querySelector('.js-slider-container')) {
         initializeSlider();
     }
@@ -21,5 +34,8 @@ window.onload = function() {
     if (document.querySelector('#registerSection')) {
         userRegisterFormHandler();
     }
-}
 
+    if (document.querySelector('.js-login-form')) {
+        initializeLoginPage();
+    }
+}

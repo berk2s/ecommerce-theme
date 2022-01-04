@@ -41,17 +41,14 @@
                         </a>
                     </div>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" aria-current="page" href="#" id="navbarDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" aria-current="page" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Laptops
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -89,17 +86,19 @@
     <main>
         <div class="container">
             <h1 class="mt-5 mb-1">Customer Login</h1>
+
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-5 offset-lg-1">
-                    <form class="form-signin my-5 mx-3 p-5 border border-5 rounded">
+                    <form class="form-signin my-5 mx-3 p-5 border border-5 rounded js-login-form">
                         <h2 class="h3 mb-5 fw-bold">Registered Customers</h2>
-                        <label for="inputEmail" class="sr-only">Email address</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
-                            required="" autofocus="">
-                        <label for="inputPassword" class="sr-only mt-1">Password</label>
-                        <input type="password" id="signInPassword" class="form-control" placeholder="Password"
-                            required="">
-                        <button class="btn btn-lg btn-primary btn-block mt-5" type="submit">Sign in</button>
+
+                        <div class="js-notification-area"></div>
+
+                        <label for="inputIdentifier" class="sr-only">Email address</label>
+                        <input type="email" id="inputIdentifier" class="form-control js-identifier" name="identifier" placeholder="Email or Phone number" required="" autofocus="">
+                        <label for="inputPassword" class="sr-only mt-1 js-password">Password</label>
+                        <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required="">
+                        <button class="btn btn-lg btn-primary btn-block mt-5 js-login-btn" type="submit">Sign in</button>
                         <div class="mt-5 fs-4 text-start">
                             <a href="#">Forgot Password?</a>
                         </div>
@@ -110,12 +109,12 @@
                         <h2 class="h3 mb-5 fw-bold">New Customer?</h2>
                         <li>Check out faster</li>
                         <li>Keep more than one adress</li>
-                        <li>Track orders and more</li>   
-                        <a href="./register.html">                
+                        <li>Track orders and more</li>
+                        <a href="./register.html">
                             <div class="btn btn-primary btn-block mt-5">
-                                
-                                    Create An Account
-                                
+
+                                Create An Account
+
                             </div>
                         </a>
                     </form>
@@ -231,4 +230,5 @@
     </footer>
 
 </body>
+
 </html>
