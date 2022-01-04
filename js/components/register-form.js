@@ -24,11 +24,11 @@ export function loadUserRegisterForm(event) {
                             <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
                                 required="" autofocus="">
                             <br/>
-                            <label for="inputPassword" class="sr-only mt-1">Password</label>
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+                            <label for="signUpPassword" class="sr-only mt-1">Password</label>
+                            <input type="password" id="signUpPassword" class="form-control" placeholder="Password"
                                 required="">
-                            <label for="inputPassword" class="sr-only mt-1">Confirm Password</label>
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+                            <label for="confirmPassword" class="sr-only mt-1">Confirm Password</label>
+                            <input type="password" id="confirmPassword" class="form-control" placeholder="Password"
                             required="">
                             <br/>
                             <label for="inputPhone" class="sr-only">Phone Number</label>
