@@ -1,3 +1,6 @@
-export { initializeProducts} from './homepage';
-export { initializeProductDetail} from './detail';
-export { loginPageFormHandler } from './login';
+export { initializeProducts }
+from './homepage';
+export { initializeProductDetail }
+from './detail';
+export { loginPageFormHandler, userRegisterFormHandler }
+from './login';

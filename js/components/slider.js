@@ -1,3 +1,6 @@
+/**
+ * Initializes slider while page is loading
+ */
 export function initializeSlider() {
     showSlideImage(0);
 
@@ -6,12 +9,21 @@ export function initializeSlider() {
 
 }
 
+/**
+ * Handles and subscribes to event
+ * @param {*} event DOM event
+ */
 function btnClick(event) {
     const index = findAttribute(event, 'data-actionable-index');
-    console.log(index);
     showSlideImage(index)
 }
 
+/**
+ * Finds attributes and returns value of attribute
+ * @param {*} event DOM object
+ * @param {*} attrName name of attribute
+ * @returns value of attribute
+ */
 function findAttribute(event, attrName) {
     for (let i = 0; i < event.path.length; i++) {
         const el = event.path[i];
@@ -25,12 +37,15 @@ function findAttribute(event, attrName) {
     }
 }
 
+/**
+ * Shows slider image with given index
+ * @param {*} index indicates of image that will be shown
+ */
 function showSlideImage(index) {
     const sliderElements = getJsSliderElements();
 
     if (sliderElements.length === 0) {
         throw new Error("There is no any slider image, please add images into slider");
-        return;
     }
 
     for (let i = 0; i < sliderElements.length; i++) {
@@ -41,6 +56,10 @@ function showSlideImage(index) {
     updateSliderButtonAttrs(index)
 }
 
+/**
+ * Updates slider button attributes
+ * @param {*} _index 
+ */
 function updateSliderButtonAttrs(_index) {
     const index = parseInt(_index);
     const imagesLength = (getJsSliderElements().length - 1);
@@ -52,6 +71,9 @@ function updateSliderButtonAttrs(_index) {
     nextBtn.setAttribute('data-actionable-index', index === imagesLength ? 0 : (index + 1))
 }
 
+/**
+ * @returns DOM object of slider
+ */
 function getJsSliderElements() {
     return document.getElementsByClassName('js-slider-image')
 }

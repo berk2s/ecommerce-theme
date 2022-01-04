@@ -1,14 +1,14 @@
 // export function registerFormLoader(){
 //     document.querySelector('#registerSection').addEventListener('submit', loadUserRegisterForm);
 // }
-import { userRegisterFormHandler } from '../pages/login';
+import { userRegisterFormHandler } from '../pages';
 
-export function loadUserRegisterForm(event){
+export function loadUserRegisterForm(event) {
     event.preventDefault();
     console.log('form yüklendi');
     const registerContent = document.getElementById('registerSection');
-    
-    
+
+
 
     let signUpFormTemplete = `<form class="form-signin my-5 mx-3 p-5 border border-5 rounded">
                             <h2 class="h3 mb-5 fw-bold">Register</h2>
@@ -40,6 +40,6 @@ export function loadUserRegisterForm(event){
 
     registerContent.innerHTML = signUpFormTemplete;
     document.querySelector('#registerSection').removeEventListener('submit', loadUserRegisterForm);
-    registerContent.id = 'userRegisterForm';    
+    registerContent.id = 'userRegisterForm';
     document.querySelector('#userRegisterForm').addEventListener('submit', userRegisterFormHandler);
 }
