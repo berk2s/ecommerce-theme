@@ -1,6 +1,6 @@
 import { initializeProducts } from './pages';
 import { initializeSlider } from './components';
-import { userRegisterFormHandler } from './pages';
+import { registerPageInitialize } from './pages';
 import { Collapse } from 'bootstrap';
 
 import '../theme/app.scss'
@@ -18,8 +18,8 @@ window.onload = function() {
         initializeProductDetail();
     }
 
-    if (document.querySelector('#registerSection')) {
-        userRegisterFormHandler();
+    if (document.querySelector('#form-signup')) {
+        registerPageInitialize();
     }
 }
 

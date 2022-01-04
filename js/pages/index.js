@@ -1,3 +1,3 @@
 export { initializeProducts} from './homepage';
 export { initializeProductDetail} from './detail';
-export { userRegisterFormHandler } from './register';
+export { registerPageInitialize } from './register';
