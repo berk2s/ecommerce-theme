@@ -1,7 +1,7 @@
 import { initializeLoginPage, initializeProducts } from './pages';
 import { initializeSlider, prepareHeader } from './components';
 import { userRegisterFormHandler } from './pages';
-
+import { Dropdown } from 'bootstrap';
 import '../theme/app.scss'
 import { auth } from './helpers';
 
