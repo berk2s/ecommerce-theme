@@ -28,7 +28,6 @@ export const itemCardTemplate = `<div class="card-content">
                             </div>
                         </div>`;
 
-
 String.prototype.format = function() {
     var args = arguments;
 
