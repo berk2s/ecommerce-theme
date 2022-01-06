@@ -1,6 +1,7 @@
 /**
  * Renders product details to element     
  * @param {*} details that contains info about detail
+ * 
  */
 export const renderProductDetail = (details) => {
     const { id = "", productName = "", description = "", prices = "", image = "" } = product;
