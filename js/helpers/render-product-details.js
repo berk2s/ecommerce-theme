@@ -3,7 +3,7 @@
  * @param {*} details that contains info about detail
  */
 export const renderProductDetail = function(details) {
-    const { productName, description, salePrice, productImages } = details;
+    const { productName="", description="", salePrice="", productImages="" } = details;
 
     const salePriceEl = document.querySelector('.js-sale-price');
     const productTitleEl = document.querySelector('.js-product-title');

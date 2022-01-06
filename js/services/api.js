@@ -1,4 +1,5 @@
-const API_URL = 'https://talent-product-api.herokuapp.com/products'
+const API_URL = 'http://api.rocketcommerce.com.tr/api/v1/products';
+
 export const getProducts = function(page = 0, size = 24, sort = 'createdAt', order = 'asc', search = '') {
     const MUTATED_URL = `${API_URL}?page=${page}&size=${size}&sort=${sort}&order=${order}&search=${search}`;
     return fetch(MUTATED_URL, {
@@ -16,7 +17,7 @@ export const getProductById = function(productId) {
         throw new Error('Do not forget to send product id');
     }
     const MUTATED_URL = `${API_URL}/${productId}`;
-    return fetch(MUTATED_URL, {
+    return fetch(/*MUTATED_URL*/API_URL, {
         method: 'GET'
     })
 }
