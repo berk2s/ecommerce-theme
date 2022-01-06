@@ -1,6 +1,6 @@
-export const itemCardTemplate = `<div class="card-content">
+export const itemCardTemplate = `<a href="detail/{0}" class="card-content">
                             <div class="image-area">
-                                <img src="{0}" alt="product image">
+                                <img src="{1}" alt="product image">
                             </div>
 
                             <div class="review-area">
@@ -18,15 +18,15 @@ export const itemCardTemplate = `<div class="card-content">
 
                             <div class="info-area">
                                 <h4 class="product-name-text">
-                                    {1}
+                                    {2}
                                 </h4>
 
                                 <div class="price-area">
-                                    <span class="old-price-text">$\{2}</span>
-                                    <span class="current-price-text">$\{3}</span>
+                                    <span class="old-price-text">$\{3}</span>
+                                    <span class="current-price-text">$\{4}</span>
                                 </div>
                             </div>
-                        </div>`;
+                        </a>`;
 
 export const headerDropdownTemplate = `
                         <div class="dropdown">

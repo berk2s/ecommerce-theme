@@ -26,7 +26,7 @@ export const renderProducts = function(renderEl, products, wrapperClass = null) 
             price = prices[0].price;
 
         // TODO: integrate product images
-        const card = itemCardTemplate.format('',
+        const card = itemCardTemplate.format('detail/' + btoa(id), '',
             productName, "", price);
 
         const wrapperEl = document.createElement('div');
