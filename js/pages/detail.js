@@ -1,9 +1,18 @@
 import { getProductById } from "../services/api";
 import { renderProductDetail } from "../helpers/render-product-details";
 
-export const initializeProductDetail = async function (productId) {
+export const initializeProductDetail = async function() {
     try {
         if (document.querySelector(".js-product-title")) {
+            if (!path ||
+                path.trim() === '' ||
+                path.split('/')[0].trim() !== 'details') {
+                window.location.href = "/";
+                throw new Error("Invalid url pattern!");
+            }
+
+            const productId = path[1].trim();
+
             const productDetailsResponse = await getProductById(productId);
             const productDetails = await productDetailsResponse.json();
 

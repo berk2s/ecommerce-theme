@@ -1,4 +1,4 @@
-import { initializeLoginPage, initializeProducts } from './pages';
+import { initializeLoginPage, initializeProducts, initializeProductDetail } from './pages';
 import { initializeSlider, prepareHeader } from './components';
 import { registerPageInitialize } from './pages';
 import { Collapse, Dropdown } from 'bootstrap';
@@ -27,7 +27,7 @@ window.onload = async function() {
         initializeProducts();
     }
 
-    if (document.querySelector('.js-product-title')) {
+    if (document.querySelectorAll('.js-details-page')) {
         initializeProductDetail();
     }
 

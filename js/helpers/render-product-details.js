@@ -2,8 +2,8 @@
  * Renders product details to element     
  * @param {*} details that contains info about detail
  */
-export const renderProductDetail = function(details) {
-    const { productName="", description="", salePrice="", productImages="" } = details;
+export const renderProductDetail = (details) => {
+    const { id = "", productName = "", description = "", prices = "", image = "" } = product;
 
     const salePriceEl = document.querySelector('.js-sale-price');
     const productTitleEl = document.querySelector('.js-product-title');
@@ -17,8 +17,8 @@ export const renderProductDetail = function(details) {
         throw new Error("Invalid elements");
     }
 
-    salePriceEl.innerHTML = '$' + salePrice;
+    salePriceEl.innerHTML = '$' + prices[0].price;
     productTitleEl.innerHTML = productName;
     productDescriptionEl.innerHTML = description;
-    productImageEl.src = productImages[0];
+    productImageEl.src = image;
 }
