@@ -1,16 +1,18 @@
 const API_URL = 'http://api.rocketcommerce.com.tr/api/v1'
 
 /**
- * @deprecated
+ * Get All Products with given parameters
+ * @param {*} page indicates page of results
+ * @param {*} size indicates size of items in page
+ * @returns object that contains Products
  */
-export const getProducts = function(page = 0, size = 24, sort = 'createdAt', order = 'asc', search = '') {
-    const MUTATED_URL = `${API_URL}?page=${page}&size=${size}&sort=${sort}&order=${order}&search=${search}`;
+export const getProducts = (page = 0, size = 24) => {
+    const MUTATED_URL = `${API_URL}/products?page=${page}&size=${size}`;
+
     return fetch(MUTATED_URL, {
-        method: 'GET'
+        method: "GET"
     })
 }
-
-
 
 /**
  * Get product by given id
