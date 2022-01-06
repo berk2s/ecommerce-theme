@@ -54,6 +54,15 @@ module.exports = merge(common, {
                     removeComments: true,
                 },
             }),
+            new HtmlWebpackPlugin({
+                template: "./html/details.html",
+                filename: "./details.html",
+                minify: {
+                    removeAttributeQuotes: true,
+                    collapseWhitespace: true,
+                    removeComments: true,
+                },
+            }),
         ],
     },
     plugins: [

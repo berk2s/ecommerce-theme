@@ -8,7 +8,7 @@
         "watch": "node-sass -w theme/ -o dist/",
         "build": "webpack --config webpack.prod.js",
         "dev": "webpack --config webpack.dev.js",
-        "renderit": "node engine homepage.html details.html products.html login.html register.html"
+        "renderit": "node engine homepage.html details.html products.html login.html register.html details.html"
     },
     "repository": {
         "type": "git",

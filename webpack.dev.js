@@ -30,6 +30,10 @@ module.exports = merge(common, {
             template: "./html/register.html",
             filename: "./register.html",
         }),
+        new HtmlWebpackPlugin({
+            template: "./html/details.html",
+            filename: "./details.html",
+        }),
 
         new MiniCssExtractPlugin({ filename: "[name].css" }),
         new CleanWebpackPlugin(),
