@@ -11,6 +11,7 @@ export const getProducts = function(page = 0, size = 24, sort = 'createdAt', ord
 }
 
 
+
 /**
  * Get product by given id
  * @param {*} productId determines product id that will be get
