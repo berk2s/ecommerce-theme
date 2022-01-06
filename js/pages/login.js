@@ -49,7 +49,7 @@ const formSubmitHandler = async(event) => {
 
         generateNotification(notificationEl,
             "Successfully logged in, please wait.", "alert-success")
-    } catch (e) {
+    }catch (e) {
         console.log(e);
         generateNotification(notificationEl,
             "Invalid credentials, please try again.", "alert-danger")

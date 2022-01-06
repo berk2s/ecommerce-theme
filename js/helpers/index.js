@@ -5,7 +5,7 @@ from './template';
 export { defaultScopes }
 from './scope'
 
-export { generateNotification }
+export { generateNotification, sezginNotification }
 from './notification'
 
 export * as storage

@@ -30,6 +30,34 @@ export const login = (identifier, password, scopes = defaultScopes) => {
     })
 }
 
+/**
+ * Sends register post request to the authantucation server
+ * @param {*} name 
+ * @param {*} surname 
+ * @param {*} password 
+ * @param {*} email 
+ * @param {*} phoneNumber 
+ * @returns 
+ */
+export const register = (name, surname, password, email, phoneNumber) => {
+
+    const MUTATED_URL = `${API_URL}/register`;
+
+    return fetch(MUTATED_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            firstName: name,
+            lastName: surname,
+            password: password,
+            email: email,
+            phoneNumber: phoneNumber,
+        })
+    })
+}
+
 
 /**
  * Gets user info 
