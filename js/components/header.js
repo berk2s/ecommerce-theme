@@ -8,7 +8,9 @@ export const prepareHeader = async() => {
     try {
         const authAreaEl = document.querySelector('.js-header-auth-area');
 
-        if (AuthFactory.getState().isLoggedIn) {
+        const isLoggedIn = AuthFactory.getState().isLoggedIn;
+
+        if (isLoggedIn) {
             const userInfo = UserFactory.getState();
 
             authAreaEl.innerHTML = headerDropdownTemplate.format(
