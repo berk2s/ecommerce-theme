@@ -129,7 +129,7 @@ function phoneValidation(event) {
     let regex = /[0-9]/g;
     // let regex2 = /[a-z]/g;
     let regex2 = /[A-Za-zÀ-ȕ-._!"`'#%&,:;<>=@{}~\$\(\)\*\+\/\\\?\[\]\^\|]/g;
-    if (regex.test(inputPhone.value) && !regex2.test(inputPhone.value) && inputPhone.value && inputPhone.value.length >= 10) {
+    if (regex.test(inputPhone.value) && !regex2.test(inputPhone.value) && inputPhone.value && (inputPhone.value.length == 10 || inputPhone.value.length == 11)) {
         inputPhone.classList.add('is-valid');
         inputPhone.classList.remove('is-invalid');
         isFormValid = true;

@@ -23,9 +23,7 @@ export const prepareHeader = async() => {
                 document.location.href = "index.html";
             });
         } else {
-            authAreaEl.innerHTML = `<a href="./login.html">
-                                        <img src="../assets/header/user_icon.png" style="width: 2rem; height: 2rem;" alt="user icon">
-                                    </a>`
+            document.querySelector('.js-header-icon').style.display = 'block'
         }
     } catch (err) {
 
