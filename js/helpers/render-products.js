@@ -18,10 +18,16 @@ export const renderProducts = function(renderEl, products, wrapperClass = null) 
     }
 
     products.forEach(product => {
-        const { id, productImages, productName, listingPrice, salePrice } = product;
+        const { id, productName, description, prices } = product;
 
-        const card = itemCardTemplate.format(productImages[0],
-            productName, listingPrice, salePrice);
+        let price = '-'
+
+        if (Array.isArray(prices) && prices.length > 0)
+            price = prices[0].price;
+
+        // TODO: integrate product images
+        const card = itemCardTemplate.format('',
+            productName, "", price);
 
         const wrapperEl = document.createElement('div');
         wrapperEl.setAttribute('data-item-id', id);

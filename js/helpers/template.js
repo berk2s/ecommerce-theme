@@ -1,6 +1,6 @@
 export const itemCardTemplate = `<div class="card-content">
                             <div class="image-area">
-                                <img src="{0}" />
+                                <img src="{0}" alt="product image">
                             </div>
 
                             <div class="review-area">
