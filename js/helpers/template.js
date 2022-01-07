@@ -1,4 +1,4 @@
-export const itemCardTemplate = `<a href="detail/{0}" class="card-content">
+export const itemCardTemplate = `<a href="details/{0}" class="card-content">
                             <div class="image-area">
                                 <img src="{1}" alt="product image">
                             </div>

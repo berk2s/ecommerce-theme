@@ -18,7 +18,7 @@ export const renderProducts = function(renderEl, products, wrapperClass = null) 
     }
 
     products.forEach(product => {
-        const { id, productName, description, prices } = product;
+        const { id, productName, description, prices, image } = product;
 
         let price = '-'
 
@@ -26,7 +26,7 @@ export const renderProducts = function(renderEl, products, wrapperClass = null) 
             price = prices[0].price;
 
         // TODO: integrate product images
-        const card = itemCardTemplate.format('detail/' + btoa(id), '',
+        const card = itemCardTemplate.format(id, image,
             productName, "", price);
 
         const wrapperEl = document.createElement('div');

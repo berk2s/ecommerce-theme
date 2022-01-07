@@ -4,7 +4,16 @@
  * 
  */
 export const renderProductDetail = (details) => {
-    const { id = "", productName = "", description = "", prices = "", image = "" } = product;
+    const { id = "", productName = "", description = "", image = "" } = details;
+    let prices = [
+        {
+            price: "$351"       
+        }
+    ]
+
+    if (typeof details.price !== 'undefined') {
+        price = details.price;
+    }
 
     const salePriceEl = document.querySelector('.js-sale-price');
     const productTitleEl = document.querySelector('.js-product-title');

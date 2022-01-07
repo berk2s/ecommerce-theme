@@ -12,12 +12,12 @@ export const initializeProductDetail = async function() {
 
             if (!path ||
                 path.trim() === '' ||
-                path.split('/')[0].trim() !== 'details') {
-                window.location.href = "/";
+                path.split('/')[1].trim() !== 'details') {
+              //  window.location.href = "/";
                 throw new Error("Invalid url pattern!");
             }
 
-            const productId = path[1].trim();
+            const productId = path.split('/')[2].trim();
 
             const productDetailsResponse = await getProductById(productId);
             const productDetails = await productDetailsResponse.json();
@@ -25,6 +25,6 @@ export const initializeProductDetail = async function() {
             renderProductDetail(productDetails);
         }
     } catch (error) {
-        alert("Sorry, something went wrong!");
+     alert("Sorry, something went wrong!");
     }
 };
