@@ -23,26 +23,20 @@ export function registerPageInitialize() {
 
 
 export async function signUpFormHandler(event) {
-
     event.preventDefault();
-    let notificationArea = document.querySelector('.js-notification-area');
     let inputPhone = document.querySelector('#inputPhone');
-
-    if (isFormValid) {
+    let isFormFilled = 
+        (inputName.value && inputSurname.value && inputEmail.value && 
+        signUpPassword.value && confirmPassword.value && inputPhone.value) 
+        ? true : false;
+    let notificationArea = document.querySelector('.js-notification-area');
+    
+    if (isFormValid && isFormFilled) {
         try {
             const registerRequest = await authApi.register(inputName.value, inputSurname.value, signUpPassword.value, inputEmail.value, inputPhone.value);
-
-         
-
             const registerResponse = await registerRequest.json();
 
-            console.log(registerResponse);
-            console.log(registerRequest.status);
-
-
             if (registerRequest.status !== 200 && registerRequest.status !== 201 ) {
-                console.log('hata');
-                console.log("2." + registerRequest.status);
                 notificationArea.innerHTML = sezginNotification('Error', `${registerResponse.error_description}`, 'alert-warning');
                 return;
             }
@@ -50,15 +44,12 @@ export async function signUpFormHandler(event) {
             notificationArea.innerHTML = sezginNotification('Registered', 'User registiration successful', 'alert-success');
             //set time out to look real...
             setTimeout(function(){document.location.href = "login.html"}, 3000);
-
         } catch (e) {
             notificationArea.innerHTML = sezginNotification('Error', 'An error occured, please try again', 'alert-warning');
         }
-
-
-
-    }
+    }else{
     notificationArea.innerHTML = sezginNotification('Error', 'Please fill all the fields in the register form', 'alert-warning');
+    }
     return;
 }
 
