@@ -58,7 +58,7 @@ export async function signUpFormHandler(event) {
 
 
     }
-    notificationArea = sezginNotification('Error', 'Invalid credentials, please try again', 'alert-warning');
+    notificationArea.innerHTML = sezginNotification('Error', 'Please fill all the fields in the register form', 'alert-warning');
     return;
 }
 
