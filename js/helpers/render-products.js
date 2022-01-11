@@ -20,7 +20,10 @@ export const renderProducts = function(renderEl, products, wrapperClass = null) 
     products.forEach(product => {
         const { id, productName, description, prices, image } = product;
 
-        let price = '-'
+        let price = '-';
+        console.log("product object:"+product);
+        console.log("prices:"+prices);
+        console.log("isArray:"+Array.isArray(prices))
 
         if (Array.isArray(prices) && prices.length > 0)
             price = prices[0].price;

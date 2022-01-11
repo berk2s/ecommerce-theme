@@ -29,7 +29,6 @@ export async function signUpFormHandler(event) {
     let inputPhone = document.querySelector('#inputPhone');
 
     if (isFormValid) {
-        console.log('register request');
         try {
             const registerRequest = await authApi.register(inputName.value, inputSurname.value, signUpPassword.value, inputEmail.value, inputPhone.value);
 
@@ -49,12 +48,11 @@ export async function signUpFormHandler(event) {
             }
 
             notificationArea.innerHTML = sezginNotification('Registered', 'User registiration successful', 'alert-success');
-            //set time out!
+            //set time out to look real...
             setTimeout(function(){document.location.href = "login.html"}, 3000);
 
         } catch (e) {
-            console.log(e);
-            notificationArea = sezginNotification('Error', 'Invalid credentials, please try again', 'alert-warning');
+            notificationArea.innerHTML = sezginNotification('Error', 'An error occured, please try again', 'alert-warning');
         }
 
 
