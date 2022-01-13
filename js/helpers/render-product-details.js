@@ -19,11 +19,12 @@ export const renderProductDetail = (details) => {
     const productTitleEl = document.querySelector('.js-product-title');
     const productDescriptionEl = document.querySelector('.js-product-description');
     const productImageEl = document.querySelector('.js-product-img');
+    const skeletonImageEl = document.querySelector('.js-image-skeleton-box');
 
     if (!salePriceEl ||
         !productTitleEl ||
         !productDescriptionEl ||
-        !productImageEl) {
+        !productImageEl || !skeletonImageEl) {
         throw new Error("Invalid elements");
     }
 
@@ -31,4 +32,6 @@ export const renderProductDetail = (details) => {
     productTitleEl.innerHTML = productName;
     productDescriptionEl.innerHTML = description;
     productImageEl.src = image;
+    productImageEl.style.display = 'block';
+    skeletonImageEl.style.display = 'none';
 }

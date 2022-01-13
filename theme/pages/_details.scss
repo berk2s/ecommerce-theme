@@ -33,6 +33,7 @@
             @include display(row, flex-start, center);
             padding: 3.5rem 0;
             img {
+                display: none;
                 width: 20rem;
                 height: 20rem;
             }
