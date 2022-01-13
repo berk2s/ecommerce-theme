@@ -16,7 +16,7 @@ export const itemCardTemplate = `<a href="details/{0}" class="card-content">
 
                             </div>
 
-                            <div class="info-area">
+                            <div class="info-area w-100 rounded">
                                 <h4 class="product-name-text">
                                     {2}
                                 </h4>
