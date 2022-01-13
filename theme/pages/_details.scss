@@ -10,10 +10,10 @@
         input {
             width: 70px;
             text-align: center !important;
-            @include font(full-black, 13px, 600);
+            @include font(full-black, 0.85rem, 600);
         }
         .sale-text {
-            @include font(full-black, 14px);
+            @include font(full-black, 0.9rem);
         }
     }
     .product-details {
@@ -21,21 +21,49 @@
             @include display(column, center, flex-start);
             @include colorize("background-color", color-9);
             height: calc(100vh - 236px);
-            padding: 0 110px 0 200px;
+            padding: 0 6.8rem 0 12.5rem;
             .title {
-                @include font(full-black, 32px, normal);
+                @include font(full-black, 2rem, normal);
             }
             .description {
-                @include font(full-black, 18px, normal);
+                @include font(full-black, 1.15rem, normal);
             }
         }
         .image-area {
             @include display(row, flex-start, center);
-            padding: 60px 0;
+            padding: 3.5rem 0;
             img {
-                width: 369px;
-                height: 369px;
+                width: 23rem;
+                height: 23rem;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .info-area {
+        @include display(column, center, flex-start);
+        @include colorize("background-color", color-9);
+        height: calc(100vh - 236px);
+        padding: 0 auto;
+        .title {
+            @include font(full-black, 2rem, normal);
+        }
+        .description {
+            @include font(full-black, 1.15rem, normal);
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .image-area {
+        @include display(row, flex-start, center);
+        padding: auto 0;
+        img {
+            width: 15rem;
+            height: 15rem;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
